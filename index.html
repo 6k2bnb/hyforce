@@ -1,103 +1,207 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HyForce | 상상퓨처프랜드</title>
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-color: #17324d;
-background: #f3f7fb;
-line-height: 1.7;
-}
-header {
-background: #123b67;
-color: white;
-padding: 35px 20px;
-text-align: center;
-}
-main {
-max-width: 650px;
-margin: 25px auto;
-padding: 20px;
-}
-section {
-background: white;
-padding: 22px;
-margin-bottom: 18px;
-border-radius: 14px;
-}
-h1, h2 { margin-top: 0; }
-a {
-color: #0759a5;
-font-weight: bold;
-}
-.contact {
-background: #e2efff;
-}
-img {
-max-width: 100%;
-height: auto;
-display: block;
-margin: 15px 0;
-border-radius: 8px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HyForce | 상상퓨처프랜드</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Malgun Gothic", sans-serif;
+      color: #17324d;
+      background: #f3f7fb;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 35px 20px;
+      text-align: center;
+      color: white;
+      background: #123b67;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+    }
+
+    main {
+      width: min(100% - 32px, 900px);
+      margin: 28px auto;
+    }
+
+    section {
+      margin-bottom: 22px;
+      padding: 24px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px rgba(20, 55, 90, 0.08);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: #123b67;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid #e2eaf2;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .gallery figcaption {
+      padding: 10px 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .contact {
+      background: #e2efff;
+    }
+
+    a {
+      color: #0759a5;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(100% - 20px, 900px);
+        margin: 16px auto;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h1>HyForce</h1>
-<p>차량용 수소발생기 제품 안내</p>
-<p>상상퓨처프랜드</p>
-</header>
-<main>
-<section>
-<h2>제품 소개</h2>
-<p>
-HyForce 제품의 작동 원리와
-설치 방법, 제품 정보를 안내합니다.
-</p>
-<img src="rental-rates.jpg" alt="HyForce 제품 가격 및 정보 이미지">
-<a href="https://hig.world/eBook/HyForce/" target="_blank">
-HyForce 전자책 보기
-</a>
-</section>
-<section>
-<h2>제품 성능 안내</h2>
-<p>
-연료 절감 및 출력 향상에 관한 내용은
-제공된 제품 자료를 참고해 주세요.
-</p>
-<p>
-실제 성능은 차량 종류와 운행 조건에 따라
-달라질 수 있습니다.
-</p>
-</section>
-<section class="contact">
-<h2>판매 및 상담 문의</h2>
-<p><strong>상상퓨처프랜드</strong></p>
-<p><strong>대표:</strong> 이동수</p>
-<p>
-<strong>전화:</strong>
-<a href="tel:01053221954">010-5322-1954</a>
-</p>
-<p>
-<strong>이메일:</strong>
-<a href="mailto:6k2bnb@naver.com">
-6k2bnb@naver.com
-</a>
-</p>
-<p>
-<strong>주소:</strong>
+  <header>
+    <h1>HyForce</h1>
+    <p>차량용 수소발생기 제품 안내</p>
+    <p>상상퓨처프랜드</p>
+  </header>
 
-인천광역시 연수구 송도미래로 30,
-E동 408호
+  <main>
+    <section>
+      <h2>제품 소개</h2>
+      <p>
+        HyForce 제품의 작동 원리와 설치 방법,
+        제품 정보를 안내합니다.
+      </p>
+    </section>
 
-송도 BRC 스마트밸리 지식산업센터
-</p>
-</section>
-</main>
+    <section>
+      <h2>HyForce 제품 자료</h2>
+
+      <div class="gallery">
+        <figure>
+          <img src="assets/cover.jpg" alt="HyForce 제품 표지">
+          <figcaption>HyForce 제품 표지</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/product-intro.jpg" alt="HyForce 제품 소개">
+          <figcaption>제품 소개</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/benefits.jpg" alt="HyForce 주요 장점">
+          <figcaption>주요 장점</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/benefits-detail.jpg" alt="HyForce 주요 장점 상세">
+          <figcaption>주요 장점 상세</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/system.jpg" alt="HyForce 시스템 작동 원리">
+          <figcaption>시스템 작동 원리</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/results.jpg" alt="HyForce 설치 후 주요 효과">
+          <figcaption>설치 후 주요 효과</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/recommended.jpg" alt="HyForce 추천 대상 및 차량 장착 구성">
+          <figcaption>추천 대상 및 차량 장착 구성</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/rental-rates.jpg" alt="HyForce 렌탈 요금표">
+          <figcaption>렌탈 요금표</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/contact-poster.jpg" alt="HyForce 상담 및 문의 안내">
+          <figcaption>상담 및 문의 안내</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>제품 성능 안내</h2>
+      <p>
+        연료 절감 및 출력 향상에 관한 내용은
+        제공된 제품 자료를 참고해 주세요.
+      </p>
+      <p>
+        실제 성능은 차량 종류와 운행 조건에 따라
+        달라질 수 있습니다.
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2>판매 및 상담 문의</h2>
+      <p><strong>상상퓨처프랜드</strong></p>
+      <p><strong>대표:</strong> 이동수</p>
+      <p>
+        <strong>전화:</strong>
+        <a href="tel:01053221954">010-5322-1954</a>
+      </p>
+      <p>
+        <strong>이메일:</strong>
+        <a href="mailto:6k2bnb@naver.com">6k2bnb@naver.com</a>
+      </p>
+      <p>
+        <strong>주소:</strong><br>
+        인천광역시 연수구 송도미래로 30, E동 408호<br>
+        송도 BRC 스마트밸리 지식산업센터
+      </p>
+    </section>
+  </main>
 </body>
 </html>
